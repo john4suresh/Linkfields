@@ -1,5 +1,38 @@
 @import "antd/dist/antd.css";
 
 .App {
-  text-align: center;
+  margin: 0 auto;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.listItem {
+  color: #000;
+}
+.listItem .link {
+  display: block;
+  color: #000;
+}
+
+.detailPage {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.detailPage .image {
+  width: 400px;
+  height: 400px;
+}
+
+.detailPage .image img {
+  max-width: 100%;
 }
