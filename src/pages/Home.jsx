@@ -42,6 +42,7 @@ const Home = (props) => {
           </Link>
         </h1>
       ))}
+      <h4>Click on the Name for More Details...</h4>
       <Pagination
         current={currentPage}
         total={data.length}
