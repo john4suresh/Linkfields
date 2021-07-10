@@ -5,7 +5,6 @@ import {
 } from "./DataTypes";
 
 const dataInitialState = {
-  loadingData: false,
   data: [],
   errorData: "",
 };
@@ -13,11 +12,10 @@ const dataInitialState = {
 export const dataReducer = (state = dataInitialState, action) => {
   switch (action.type) {
     case FETCH_DATA_START:
-      return { ...state, loadingData: true };
+      return { ...state };
     case FETCH_DATA_SUCCESS:
       return {
         ...state,
-        loadingData: false,
         data: action.payload,
         errorData: "",
       };
@@ -25,7 +23,6 @@ export const dataReducer = (state = dataInitialState, action) => {
     case FETCH_DATA_FAIL:
       return {
         ...state,
-        loadingData: false,
         data: [],
         errorData: action.payload,
       };

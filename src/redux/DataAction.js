@@ -14,18 +14,15 @@ export const fetchData = () => {
       const data = await axios.get(
         `https://pokeapi.co/api/v2/pokemon?limit=100`
       );
-      // console.log(data);
-      var product = data.data.results;
-      // console.log(product);
+      var pokemon_data = data.data.results;
       dispatch({
         type: FETCH_DATA_SUCCESS,
-        payload: product,
+        payload: pokemon_data,
       });
     } catch (err) {
       dispatch({
         type: FETCH_DATA_FAIL,
         payload: err,
-        error: true,
       });
     }
   };
